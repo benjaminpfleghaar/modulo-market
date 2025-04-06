@@ -1,3 +1,3 @@
 export default function App() {
-    return <h1>Modulo Market</h1>
+    return <h1 className="font-regular">Modulo Market</h1>
 }
