@@ -1,54 +1,63 @@
-# React + TypeScript + Vite
+# Modulo Market
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Modulo Market** is a small online shop built with **React**, created as a personal learning project by [Stephan](https://github.com/StephMode) and [Benjamin](https://github.com/benjaminpfleghaar). Together we want to strengthen our frontend skills and experiment with new technologies and tools in a hands-on way.
 
-Currently, two official plugins are available:
+![Mockup](./src/assets/images/mockup.jpg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The complete styleguide including colors, icons and layouts can be found in this Figma file: [Styleguide](https://www.figma.com/design/Iw2EobZE1BCoDp3stKFsAp/Modulo-Market-Design?node-id=2062-350)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Product Overview**: Browse all available products in one place
+- **Product Detail Page**: View high-quality product images with an interactive slider
+- **Stripe Integration**: Secure and seamless checkout powered by Stripe
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Technologies
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+This project is built with:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Library**: [React](https://react.dev/)
+- **Styling**: [Tailwind](https://tailwindcss.com)
+- **Checkout**: [Stripe](https://stripe.com/de)
+- **Images**: [Unsplash](https://unsplash.com/de)
+- **Icons**: [Heroicons](https://heroicons.com/)
+- **Testing**: [Jest](https://jestjs.io/)
+- **Font**: [Geist](https://vercel.com/font)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## Getting Started
+
+Ensure you have **Node.js** installed on your machine.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/benjaminpfleghaar/modulo-market.git
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the application:
+   ```bash
+   npm run dev
+   ```
+
+## Project Structure
+
+The project follows a clear structure:
+
+```plaintext
+src/                # Source code
+├── assets/         # Static assets
+│   ├── fonts/
+│   ├── images/
+├── components/     # UI components
+├── lib/            # Utility functions
+├── pages/          # Page components
+├── styles/         # Global styles
+│
+├── main.tsx        # React root file
 ```
